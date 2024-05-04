@@ -1,29 +1,291 @@
 <html>
-  <head>
-    
-  </head>
-  <body>
-    <p>Please help Movin recover from Brain Tumor.</p>
-    <p>
-      First of all, thank you for taking time to read and understand our situation. I am Vinod, married to my wife Harini since 2022 September 12th, we have a son, Movin who was born on 2023 August 18th.
-    </p>
-    <p>
-      We are both seeing help to cure our son from Brain Tumor.
-    </p>
-    <p>
-      Life was happy and everything was going good until April 1st 2024, that's when our son was diagnosed with few complications and needs treatment -
-      1. Diagnosed with a tumor (Grade II - Diffuse Astrocytoma) of about 6cm x 4cm x 4cm with majority of it's portion occupying right cerebellum.
-      2. Because of the tumor, the cerbral fluid in his head was acculating without draining (Tumor had blocked the passage of CSF, that happens through Spine). This condition is caled Hydrocephalus.
-      3. Because of the tumor, thrombus (a large blood clot) has been developed in right side vein - blood vesel from brain to heart.
 
-      On 2nd April, he underwent a surgery to provide a path for fluids to drain (a VP Shunt was placed), so that the excess CSF from skull can drain through the tube and go down to abdomen.
-      On 4th April, he underwent a major surgery to operate and remove as much tumor as possible safely.
-      On 4th April, while undergoing major surgery doctors have identified that they couldn't access the vein on right side of the neck because of a Thrombus.
-      On 24th April, he needed a revision of VP Shunt and underwent surgery to replace VP Shunt.
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      Need to undertake Chemotherpy and Radition Therepy in near future. This is a long term treatment that could span for few years.
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .carousel-item {
+      text-align: center;
+      background-color: #39000052;
+    }
 
-      Test
-    </p>
-  </body>
+    .content-section {
+      padding: 8px 0;
+      margin: 8px 0;
+      border: 0 solid #ddd;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+    }
+
+    .no-bullet {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .treatment::before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+    }
+
+    .treatment-completed::before {
+      content: "\f058";
+      color: darkblue;
+    }
+
+    .treatment-completed>.treatment-title {
+      font-style: italic;
+    }
+
+    .treatment-not-started::before {
+      content: "\f017";
+      color: orange;
+    }
+
+    .treatment-not-started>.treatment-title {
+      /* font-weight: bold; */
+    }
+
+    .treatment-failed::before {
+      content: "\f06a";
+      color: darkred;
+    }
+
+    .treatment-failed>.treatment-title {
+      text-decoration: line-through;
+    }
+
+    /* .treatment-details:not(.expanded) {
+      position: relative;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .treatment-details:not(.expanded)::before {
+      content: "View Details";
+      text-decoration: underline;
+      color: blue;
+      position: absolute;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 30%, rgba(255, 255, 255, 0.2) 70%, rgba(255, 255, 255, 0) 100%);
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 24px;
+      cursor: pointer;
+    } */
+
+    @media screen and (min-width: 768px) {
+      #mycarousel1 {
+        position: fixed;
+      }
+
+      #mycarousel1,
+      .carousel-holder {
+        width: 75vh;
+        height: 100vh;
+      }
+    }
+
+    @media screen and (max-width: 767.9px) {
+      .carousel-holder {
+        height: 80vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="row m-0">
+    <div class="carousel-holder p-0">
+      <div id="mycarousel1" class="carousel carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="./images/20240406_1.jpg" class="h-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Post Operative Photo</h5>
+              <p>April 6th 2024</p>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mycarousel1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col">
+      <h2>Please help us treat our 8 month old son's Brain Tumor</h2>
+
+      <div class="content-section">
+        <p>
+          <i>We are very thankful for all your support. Thank you for trying to understand our situation and support us
+            however you can.</i>
+        </p>
+        <p>
+          My wife (Harini), and I (Vinod) are seeking support to treat our son's (Movin) Brain Tumor. Which was
+          diagnosed as grade-II cancer known as Diffuse Astrocytoma.
+        </p>
+      </div>
+      <div class="content-section">
+        <h4>You may please help us by...</h4>
+        <ol>
+          <li>
+            Praying for our son's recovery.
+            <ul>
+              You may contact me at <a href="mailto:vinodkumarkv13@gmail.com">vinodkumarkv13@gmail.com</a> to know my son's health or any other details. I will do my best to reply at the earliest.
+            </ul>
+          </li>
+          <li>
+            Donating funds that will ease our pain on medical bills.
+            <ul>
+              Please donate through one of the following ways, if <b>transferring from India</b>:
+              <li>
+                Bank Name: ICICI<br />
+                Account No: 234601500900<br />
+                Account Holder Name: Vinod Kumar K V<br />
+                IFSC Code: ICIC0002346
+              </li>
+              <li>UPI: vinodkumarkv13@okicici</li>
+              <br />
+              Please donate through ACH bank transfer to the following bank account, if <b>transferring from US</b>:
+              <li>
+                Bank Name: AMG National Trust Bank<br />
+                Account No: 452633666991<br />
+                Routing Number: 107007634<br />
+                Account Holder Name: Vinod Kumar Kolakaluri Vijayakumar
+              </li>
+            </ul>
+          </li>
+          <li>Sharing this page to your friends and family for their support.</li>
+        </ol>
+      </div>
+      <div class="content-section">
+        <h4>Treatment Plan</h4>
+        <ul class="no-bullet">
+          <li class="treatment treatment-completed">
+            <span class="treatment-title">Diagnose the cause of symptoms we noticed (Continously crying, slightly
+              enlarged and tilted
+              head)<b> - Diagnosed</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 1st 2024</b>, our son was diangosed with <b>Tumor</b> in right Cerebellum. That was about
+                6.7cm x 5.6cm x 3.7cm in size. Because of the growth of this tumor the natural way out of cerebrospinal
+                fluid (CSF) was collapsed, and caused the accumlation of fluids around brain with excessive pressure -
+                this condition is called <b>Hydrocephalus</b>. Hydrocephalus was an immediate life threating risk and
+                that was the cause of enlargement of head.</li>
+            </ul>
+          </li>
+          <li class="treatment treatment-completed">
+            <span class="treatment-title">Treat Hydrocephalus<b> - Treated</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 2nd 2024</b>, an emergency surgical procedure called <b>VP Shunt placement</b> was
+                performed. A tube was put inside our son's body with one end in the head and another in the abdomen, so
+                that the excess fluids from head can flow to abdomen, which would naturally exit the body.</li>
+              <li><b>On April 7th 2024</b>, started getting fever spikes. The fever was on and off, and that went on for
+                more than 2 weeks (beyond April 19th).</li>
+              <li><b>On April 19th 2024</b>, admitted to hospital again as the temperature was not going down. After
+                conducting various tests on blood, urine and CSF the doctors have identified that the placed VP Shunt
+                was not functioning correctly and it's likely blocked because of an infection. Infection needs to be
+                treated, and the blocked shunt has to be replaced.</li>
+              <li><b>On April 24th 2024</b>, <b>VP Shunt was replaced</b> through another surgical procedure.</li>
+              <li>Our son is currently on anti-biotics to treat infection as well, so far no fever and we only pray to
+                God that this shunt continues to work fine for a long time.</li>
+            </ul>
+          </li>
+          <li class="treatment treatment-failed">
+            <span class="treatment-title">Full Tumor Excision<b> - Failed</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 4th 2024</b>, our son underwent a major surgical procedure to remove as much tumor as
+                possible
+                without putting his life at risk. In spite of the Doctors' best effort the tumor couldn't be fully
+                removed as it had spread to some critical areas such as brain stem, that can't be operated. <b>So the
+                  attempt to fully remove the tumor had failed.</b></li>
+            </ul>
+          </li>
+          <li class="treatment treatment-completed">
+            <span class="treatment-title">Partial Tumor Excision<b> - Partially Removed</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 4th 2024</b>, the major surgical procedure to remove the tumor was performed and
+                <b>Doctors were
+                  able to remove about 70% of the Tumor</b>. The removed portion of the tumor was then sent to biopsy to
+                understand the nature of the tumor.</li>
+            </ul>
+          </li>
+          <li class="treatment treatment-completed">
+            <span class="treatment-title">Diagnose Tumor Type<b> - Diagnosed</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 17th 2024</b>, the tumor tissue was studied and reported as <b>Grade-II cancer known as
+                  Diffuse Astrocytoma</b>. Since, it's a cancerous tumor if left untreated it would spread to other
+                areas of brain and put our son's life at risk.</li>
+            </ul>
+          </li>
+          <li class="treatment treatment-not-started">
+            <span class="treatment-title">Undergo Chemotherpy for 2 or more years<b> - Will begin the treatment in few
+                weeks</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 17th 2024</b>, the tumor tissue was identified to be cancerous and our son needs to
+                undergo Chemotherpy to reduce/halt/shrink the growth of tumor. We were told by the doctors that Diffuse
+                Astrocytoma is a type of Tumor that grows slowly and thus on the down-side takes a long time to respond
+                for Chemotherpy. Considering the age of our son, the only available treatment option is Chemotherpy.
+                With Chemotherpy, a range of side effects including lower immunity level, kidney damage and hearing-loss
+                can occur, and we only pray that none of these side-effects occur to our son.
+              </li>
+            </ul>
+          </li>
+          <li class="treatment treatment-not-started">
+            <span class="treatment-title">Undergo Proton therapy after 3 years<b> - Will undergo when our son is atleast
+                3 years old</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 17th 2024</b>, the tumor tissue was identified to be cancerous and our son needs to
+                undergo Proton/Radition therapy to fully get rid of cancerous cells. However, considering the age of our
+                son he needs to wait at least 2.5 to 3.5 years before he can undergo this treatment. Meanwhile,
+                Chemotherpy will prevent the tumor from growing further.
+              </li>
+            </ul>
+          </li>
+          <li class="treatment treatment-not-started">
+            <span class="treatment-title">Treat Jugular Vein Thrombosis<b> - Diagnosed, but not treated.</b></span>
+            <ul class="treatment-details">
+              <li><b>On April 4th 2024</b>, when surgical procedure to remove tumor was performed doctors noticed that
+                they couldn't find vein in the right side of the neck (to give IV fluids, blood transfusion during
+                surgery and anesthesia). Later, was diagnosed that due to tumor growth, the vein has been compressed, or
+                created large clot that completely blocked the vein that takes blood from brain back to heart. Doctors
+                have assured that this is not an immediate threat, but will need a treatment in future.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script>
+    let treatmentDetailsObjects = document.querySelectorAll(".treatment-details");
+    let handleExpadTreatmentDetails = function () {
+      this.classList.add("expanded");
+    }
+    for (let t = 0; t < treatmentDetailsObjects.length; ++t) {
+      treatmentDetailsObjects[t].addEventListener("click", handleExpadTreatmentDetails);
+    }
+  </script>
+</body>
+
 </html>
