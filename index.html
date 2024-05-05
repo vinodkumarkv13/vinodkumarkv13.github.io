@@ -2,8 +2,17 @@
 
 <head>
   <title>Help us treat our 8 month old son's Brain Tumor</title>
+  <meta name="description" content="Help us treat our 8 month old son's Brain Tumor, Help Movin! Save Life!" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Help our son, Movin!" />
+  <meta property="og:url" content="https://www.helpmovin.com/" />
+  <meta property="og:description" content="Help us treat our 8 month old son's Brain Tumor" />
+  <meta property="og:image" content="https://www.helpmovin.com/images/20240427_1.jpg" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_IN" />
+
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -34,6 +43,7 @@
 
     .funding-progress {
       height: 5px;
+      background-color: #b20000;
     }
 
     .funding-details-link {
@@ -46,9 +56,7 @@
       padding-right: 16px !important;
     }
 
-    #mycarousel1 {
-      
-    }
+    #mycarousel1 {}
 
     .carousel-item {
       text-align: center;
@@ -59,6 +67,7 @@
       padding: 16px 0;
       border: 0 solid #ddd;
       border-bottom-width: 1px;
+      position: relative;
     }
 
     .no-bullet {
@@ -66,7 +75,7 @@
       padding: 0;
     }
 
-    .treatment::before {
+    .treatment-status::before {
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
     }
@@ -98,14 +107,28 @@
       text-decoration: line-through;
     }
 
-    /* .treatment-details:not(.expanded) {
+    #treatment-table {
+      width: 100%;
+    }
+
+    #treatment-table th,
+    #treatment-table td {
+      border: 1px solid;
+      padding: 0 4px;
+    }
+
+    #treatment-table tr > td:nth-child(3) {
+      text-align: right;
+    }
+
+    .treatment-details:not(.expanded) {
       position: relative;
       height: 50px;
       overflow: hidden;
     }
 
     .treatment-details:not(.expanded)::before {
-      content: "View Details";
+      content: "Show Details";
       text-decoration: underline;
       color: blue;
       position: absolute;
@@ -116,10 +139,20 @@
       text-align: center;
       padding-top: 24px;
       cursor: pointer;
-    } */
+    }
 
     .text-small {
       font-size: 0.75em;
+    }
+
+    .spacer {
+      display: inline-block;
+      width: 50px;
+    }
+
+    .nav-marker {
+      position: absolute;
+      top: -80px;
     }
 
     @media screen and (min-width: 768px) {
@@ -150,7 +183,7 @@
 <body>
   <div class="page-header">
     <h4 class="page-heading">Please help us treat our 8 month old son's Brain Tumor</h4>
-    <div class="funding-status">
+    <a class="funding-status" href="#donation-details-marker">
       <div>
         <div><span class="text-small">Total Treatment Cost: </span><span id="fund-needed" class="fund">8000000</span>
         </div>
@@ -165,24 +198,44 @@
       <div class="funding-details-link">
         <i class="fas fa-chevron-right"></i>
       </div>
-    </div>
+    </a>
   </div>
   <div class="row m-0">
     <div class="carousel-holder p-0">
       <div id="mycarousel1" class="carousel carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="1" aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="2" aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="3" aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="4" aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="5" aria-label="Movin"></button>
+          <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="6" aria-label="Movin"></button>
         </div>
         <div class="carousel-inner">
 
           <div class="carousel-item active">
-            <img src="./images/20240406_1.jpg" class="h-100">
+            <img src="./images/20240427_1.jpg" class="h-100">
             <div class="carousel-caption">
-              <h5>Tumor partially removed and VP Shunt placed</h5>
-              <p>April 6th 2024</p>
+              <h5>VP Shunt was replaced</h5>
+              <p>April 27th 2024</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/20240427_2.jpg" class="h-100">
+            <div class="carousel-caption">
+              <h5>VP Shunt was replaced</h5>
+              <p>April 27th 2024</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/20240427_3.jpg" class="h-100">
+            <div class="carousel-caption">
+              <h5>VP Shunt was replaced</h5>
+              <p>April 27th 2024</p>
             </div>
           </div>
 
@@ -191,6 +244,30 @@
             <div class="carousel-caption">
               <h5>VP Shunt was replaced</h5>
               <p>April 24th 2024</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/20240406_1.jpg" class="h-100">
+            <div class="carousel-caption">
+              <h5>Tumor partially removed and VP Shunt placed</h5>
+              <p>April 6th 2024</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="./images/20240326_1.jpg" class="h-100">
+            <div class="carousel-caption">
+              <h5>Few days before diagnosis. Head enlargement and tilt can be noticed</h5>
+              <p>March 26th 2024</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="./images/20240323_1.jpg" class="h-100">
+            <div class="carousel-caption">
+              <h5>Few days before diagnosis</h5>
+              <p>March 23rd 2024</p>
             </div>
           </div>
 
@@ -215,156 +292,256 @@
           My wife (Harini), and I (Vinod) are seeking support to treat our son's (Movin) Brain Tumor. Which was
           diagnosed as grade-II cancer known as Diffuse Astrocytoma.
         </p>
+        <p>
+          <a href="#donation-details-marker">I would like to donate</a><span class="spacer"></span>
+          <a href="#treatment-details-marker">I want to know more about the treatment</a><span class="spacer"></span>
+        </p>
       </div>
       <div class="content-section">
         <h4>Please help us by...</h4>
         <ol>
           <li>
             Praying for our son's recovery.
-            <ul>
-              You may contact me at <a href="mailto:vinodkumarkv13@gmail.com">vinodkumarkv13@gmail.com</a> to know about
-              my son's health or any other details. I will do my best to reply at the earliest.
-            </ul>
+            <br />
+            You may contact me at <a href="mailto:vinodkumarkv13@gmail.com">vinodkumarkv13@gmail.com</a> to know about
+            my son's health or any other details. I will do my best to reply at the earliest.
           </li>
           <li>
             Donating funds that will ease our pain on medical bills.
-            <ul>
-              <li>
-                <b>If you are transferring from India</b>, please donate through one of these payment options:
-                <ul>
-                  <li>
-                    Bank Name: Indusind Bank<br />
-                    Account No: 159600077566<br />
-                    IFSC Code: INDB0000388<br />
-                    Account Holder Name: Vinod Kumar K V<br />
-                  </li>
-                  <li>
-                    UPI ID: vinodkumarkv13-1@okaxis<br />
-                    Account Holder Name: Vinod Kumar K V<br />
-                  </li>
-                  <li>
-                    UPI Phone Number: 9600077566<br />
-                    Account Holder Name: Vinod Kumar K V<br />
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <b>If you are transferring from United States</b>, please donate through this option:
-
-                <ul>
-                  <li>
-                    Bank Name: AMG National Trust Bank<br />
-                    Account No: 452633666991<br />
-                    Routing Number: 107007634<br />
-                    Account Holder Name: Vinod Kumar Kolakaluri Vijayakumar
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <br />
+            <a href="#donation-details-marker">Donate Now</a>
           </li>
           <li>Sharing this page to your friends and family for their support.</li>
         </ol>
       </div>
       <div class="content-section">
-        <h4>Treatment Cost and Funding Details</h4>
-      </div>
-      <div class="content-section">
-        <h4>Treatment Details</h4>
-        <ul class="no-bullet">
-          <li class="treatment treatment-completed">
-            <span class="treatment-title">Diagnose the cause of symptoms we noticed (Continously crying, slightly
-              enlarged and tilted
-              head)<b> - Diagnosed</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 1st 2024</b>, our son was diangosed with <b>Tumor</b> in right Cerebellum. That was about
-                6.7cm x 5.6cm x 3.7cm in size. Because of the growth of this tumor the natural way out of cerebrospinal
-                fluid (CSF) was collapsed, and caused the accumlation of fluids around brain with excessive pressure -
-                this condition is called <b>Hydrocephalus</b>. Hydrocephalus was an immediate life threating risk and
-                that was the cause of enlargement of head.</li>
-            </ul>
-          </li>
-          <li class="treatment treatment-completed">
-            <span class="treatment-title">Treat Hydrocephalus<b> - Treated</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 2nd 2024</b>, an emergency surgical procedure called <b>VP Shunt placement</b> was
-                performed. A tube was put inside our son's body with one end in the head and another in the abdomen, so
-                that the excess fluids from head can flow to abdomen, which would naturally exit the body.</li>
-              <li><b>On April 7th 2024</b>, started getting fever spikes. The fever was on and off, and that went on for
-                more than 2 weeks (beyond April 19th).</li>
-              <li><b>On April 19th 2024</b>, admitted to hospital again as the temperature was not going down. After
-                conducting various tests on blood, urine and CSF the doctors have identified that the placed VP Shunt
-                was not functioning correctly and it's likely blocked because of an infection. Infection needs to be
-                treated, and the blocked shunt has to be replaced.</li>
-              <li><b>On April 24th 2024</b>, <b>VP Shunt was replaced</b> through another surgical procedure.</li>
-              <li>Our son is currently on anti-biotics to treat infection as well, so far no fever and we only pray to
-                God that this shunt continues to work fine for a long time.</li>
-            </ul>
-          </li>
-          <li class="treatment treatment-failed">
-            <span class="treatment-title">Full Tumor Excision<b> - Failed</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 4th 2024</b>, our son underwent a major surgical procedure to remove as much tumor as
-                possible
-                without putting his life at risk. In spite of the Doctors' best effort the tumor couldn't be fully
-                removed as it had spread to some critical areas such as brain stem, that can't be operated. <b>So the
-                  attempt to fully remove the tumor had failed.</b></li>
-            </ul>
-          </li>
-          <li class="treatment treatment-completed">
-            <span class="treatment-title">Partial Tumor Excision<b> - Partially Removed</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 4th 2024</b>, the major surgical procedure to remove the tumor was performed and
-                <b>Doctors were
-                  able to remove about 70% of the Tumor</b>. The removed portion of the tumor was then sent to biopsy to
-                understand the nature of the tumor.
+        <div id="donation-details-marker" class="nav-marker"></div>
+        <h4>Donation Details</h4>
+        <ul>
+          <li>
+            <b>If you are transferring from India</b>, please donate through one of these payment options:
+            <ul>
+              <li>
+                Bank Name: Indusind Bank<br />
+                Account No: 159600077566<br />
+                IFSC Code: INDB0000388<br />
+                Account Holder Name: Vinod Kumar K V<br />
+              </li>
+              <li>
+                UPI ID: vinodkumarkv13-1@okaxis<br />
+                Account Holder Name: Vinod Kumar K V<br />
+              </li>
+              <li>
+                UPI Phone Number: 9600077566<br />
+                Account Holder Name: Vinod Kumar K V<br />
               </li>
             </ul>
           </li>
-          <li class="treatment treatment-completed">
-            <span class="treatment-title">Diagnose Tumor Type<b> - Diagnosed</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 17th 2024</b>, the tumor tissue was studied and reported as <b>Grade-II cancer known as
-                  Diffuse Astrocytoma</b>. Since, it's a cancerous tumor if left untreated it would spread to other
-                areas of brain and put our son's life at risk.</li>
-            </ul>
-          </li>
-          <li class="treatment treatment-not-started">
-            <span class="treatment-title">Undergo Chemotherpy for 2 or more years<b> - Will begin the treatment in few
-                weeks</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 17th 2024</b>, the tumor tissue was identified to be cancerous and our son needs to
-                undergo Chemotherpy to reduce/halt/shrink the growth of tumor. We were told by the doctors that Diffuse
-                Astrocytoma is a type of Tumor that grows slowly and thus on the down-side takes a long time to respond
-                for Chemotherpy. Considering the age of our son, the only available treatment option is Chemotherpy.
-                With Chemotherpy, a range of side effects including lower immunity level, kidney damage and hearing-loss
-                can occur, and we only pray that none of these side-effects occur to our son.
-              </li>
-            </ul>
-          </li>
-          <li class="treatment treatment-not-started">
-            <span class="treatment-title">Undergo Proton therapy after 3 years<b> - Will undergo when our son is atleast
-                3 years old</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 17th 2024</b>, the tumor tissue was identified to be cancerous and our son needs to
-                undergo Proton/Radition therapy to fully get rid of cancerous cells. However, considering the age of our
-                son he needs to wait at least 2.5 to 3.5 years before he can undergo this treatment. Meanwhile,
-                Chemotherpy will prevent the tumor from growing further.
-              </li>
-            </ul>
-          </li>
-          <li class="treatment treatment-not-started">
-            <span class="treatment-title">Treat Jugular Vein Thrombosis<b> - Diagnosed, but not treated.</b></span>
-            <ul class="treatment-details">
-              <li><b>On April 4th 2024</b>, when surgical procedure to remove tumor was performed doctors noticed that
-                they couldn't find vein in the right side of the neck (to give IV fluids, blood transfusion during
-                surgery and anesthesia). Later, was diagnosed that due to tumor growth, the vein has been compressed, or
-                created large clot that completely blocked the vein that takes blood from brain back to heart. Doctors
-                have assured that this is not an immediate threat, but will need a treatment in future.
+
+          <li>
+            <b>If you are transferring from United States</b>, please donate through this option:
+
+            <ul>
+              <li>
+                Bank Name: AMG National Trust Bank<br />
+                Account No: 452633666991<br />
+                Routing Number: 107007634<br />
+                Account Holder Name: Vinod Kumar Kolakaluri Vijayakumar
               </li>
             </ul>
           </li>
         </ul>
+      </div>
+      <div class="content-section">
+        <div id="treatment-details-marker" class="nav-marker"></div>
+        <h4>Treatment Details and Cost</h4>
+        <table id="treatment-table">
+          <thead>
+            <tr>
+              <th>Treatment / Diagnosis (<a href="#">Show the details of all the treatments below</a>)</th>
+              <th>Treatment Status</th>
+              <th>Cost</th>
+              <th>Funding Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="treatment-title">Diagnose the cause of symptoms we noticed (Continously crying, slightly
+                  enlarged and tilted head)</span>
+                <ul class="treatment-details">
+                  <li><b>On April 1st 2024</b>, our son was diangosed with <b>Tumor</b> in right Cerebellum. That was
+                    about
+                    6.7cm x 5.6cm x 3.7cm in size. Because of the growth of this tumor the natural way out of
+                    cerebrospinal
+                    fluid (CSF) was collapsed, and caused the accumlation of fluids around brain with excessive pressure
+                    -
+                    this condition is called <b>Hydrocephalus</b>. Hydrocephalus was an immediate life threating risk
+                    and
+                    that was the cause of enlargement of head.</li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-completed">Diagnosed</span></td>
+              <td>
+                <span class="fund treatment-cost">30000</span>
+              </td>
+              <td>Self Funded</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Treat Hydrocephalus #1</span>
+                <ul class="treatment-details">
+                  <li><b>On April 2nd 2024</b>, an emergency surgical procedure called <b>VP Shunt placement</b> was
+                    performed. A tube was put inside our son's body with one end in the head and another in the abdomen,
+                    so
+                    that the excess fluids from head can flow to abdomen, which would naturally exit the body.</li>
+                  <li><b>On April 7th 2024</b>, started getting fever spikes. The fever was on and off, and that went on
+                    for more than 2 weeks. But was discharged from hospital on April 10th 2024.</li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-failed">Shunt got blocked</span></td>
+              <td rowspan="4">
+                <span class="fund treatment-cost">750000</span>
+              </td>
+              <td rowspan="4">Self Funded + Partially covered by insurance</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Full Tumor Excision</span>
+                <ul class="treatment-details">
+                  <li><b>On April 4th 2024</b>, our son underwent a major surgical procedure to remove as much tumor as
+                    possible
+                    without putting his life at risk. In spite of the Doctors' best effort the tumor couldn't be fully
+                    removed as it had spread to some critical areas such as brain stem, that can't be operated. <b>So the
+                      attempt to fully remove the tumor had failed.</b></li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-failed">Failed</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Partial Tumor Excision</span>
+                <ul class="treatment-details">
+                  <li><b>On April 4th 2024</b>, the major surgical procedure to remove the tumor was performed and
+                    <b>Doctors were
+                      able to remove about 70% of the Tumor</b>. The removed portion of the tumor was then sent to biopsy to
+                    understand the nature of the tumor.
+                  </li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-completed">Partially Removed</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Diagnose Tumor Type</span>
+                <ul class="treatment-details">
+                  <li><b>On April 17th 2024</b>, the tumor tissue was studied and reported as <b>Grade-II cancer known as
+                      Diffuse Astrocytoma</b>. Since, it's a cancerous tumor if left untreated it would spread to other
+                    areas of brain and put our son's life at risk.</li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-completed">Diagnosed</span></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Treat Hydrocephalus #2</span>
+                <ul class="treatment-details">
+                  <li><b>On April 19th 2024</b>, admitted to hospital again as the temperature was not going down even after 2 weeks (Fever had started on April 7th 2024). After
+                    conducting various tests on blood, urine and CSF the doctors have identified that the placed VP
+                    Shunt
+                    was not functioning correctly and it's likely blocked because of an infection. Infection needs to be
+                    treated, and the blocked shunt has to be replaced.</li>
+                  <li><b>On April 24th 2024</b>, <b>VP Shunt was replaced</b> through another surgical procedure.</li>
+                  <li>Our son is currently on anti-biotics to treat infection as well, so far no fever and we only pray
+                    to
+                    God that this shunt continues to work fine for a long time.</li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-completed">Treated</span></td>
+              <td>
+                <span class="fund treatment-cost">220000</span>
+              </td>
+              <td>Self Funded</td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Port Surgery for Chemotherpy</span>
+                <ul class="treatment-details">
+                  <li>As per doctors' instructions, the chemotherpy medication has to be passed via large IV line and thus it's not possible to inject needle in hands/legs, especially for small children. A surgical procedure will be performed for placing a <b>Port</b> near the heart inside the body, that will give access to doctors to place IV line on it and pass the medication.</li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-not-started">Will undergo in few weeks</span></td>
+              <td>
+                <span class="fund treatment-cost">150000</span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Undergo Chemotherpy for 2 or more years</span>
+                <ul class="treatment-details">
+                  <li>As the tumor was identified to be cancerous, our son needs to
+                    undergo Chemotherpy to reduce/halt/shrink the growth of tumor. We were told by the doctors that Diffuse
+                    Astrocytoma is a type of Tumor that grows slowly and thus on the down-side takes a long time to respond
+                    for Chemotherpy. Considering the age of our son, the only available treatment option is Chemotherpy.
+                    With Chemotherpy, a range of side effects including lower immunity level, kidney damage and hearing-loss
+                    can occur, and we only pray that none of these side-effects occur to our son.
+                  </li>
+                  <li>Cost of this treatment is estimated at around <b><span class="fund">40000</span></b> per session. A session is a treatment course for a week (medicine will be given for 5 days and 2 days will be given for body to recover). On an average this treatment must be given for 2 years (52 weeks x 2 years = <b>104 sessions</b>). So the total cost of treatment for 104 weeks is <b><span class="fund">4160000</span></b></li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-not-started">Will begin to undergo in few weeks</span></td>
+              <td>
+                <span class="fund treatment-cost">4160000</span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Undergo Proton therapy after 3 years</span>
+                <ul class="treatment-details">
+                  <li>As the tumor tissue was identified to be cancerous and our son needs to
+                    undergo Proton/Radition therapy to fully get rid of cancerous cells. However, considering the age of our
+                    son he needs to wait at least 2.5 to 3.5 years before he can undergo this treatment. Meanwhile,
+                    Chemotherpy will prevent the tumor from growing further.
+                  </li>
+                  <li>Cost of proton therapy is estimated at between <b><span class="fund">3000000</span></b> to <b><span class="fund">3500000</span></b></li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-not-started">Will undergo when our son is atleast
+                3 years old</span></td>
+              <td>
+                <span class="fund treatment-cost">3500000</span>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <span class="treatment-title">Treat Jugular Vein Thrombosis</span>
+                <ul class="treatment-details">
+                  <li>When surgical procedure to remove tumor was performed on April 4th 2024, doctors noticed that
+                    they couldn't find vein in the right side of the neck (to give IV fluids, blood transfusion during
+                    surgery and anesthesia). Later, was diagnosed that due to tumor growth, the vein has been compressed, or
+                    created large clot that completely blocked the vein that takes blood from brain back to heart. Doctors
+                    have assured that this is not an immediate threat, but will need a treatment in future.
+                  </li>
+                </ul>
+              </td>
+              <td><span class="treatment-status treatment-not-started">Treatment plan unknown</span></td>
+              <td>
+                ???
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="2">Cost of treatment as on date</td>
+              <td>
+                <b><span id="total-treatment-cost" class="fund"></span></b>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -380,6 +557,14 @@
       treatmentDetailsObjects[t].addEventListener("click", handleExpadTreatmentDetails);
     }
 
+    let totalTreatmentCost = 0;
+    let treatmentCostItems = document.querySelectorAll(".treatment-cost");
+    for (let t = 0; t < treatmentCostItems.length; ++t) {
+      totalTreatmentCost += parseFloat(treatmentCostItems[t].textContent);
+    }
+    document.querySelector("#total-treatment-cost").textContent = totalTreatmentCost.toString();
+    document.querySelector("#fund-needed").textContent = totalTreatmentCost.toString();
+
     let fundObjects = document.querySelectorAll(".fund");
     let formatFundForIndia = () => {
       for (let f = 0; f < fundObjects.length; ++f) {
@@ -390,7 +575,7 @@
     }
     let formatFundForUS = () => {
       for (let f = 0; f < fundObjects.length; ++f) {
-        let fund = parseFloat(fundObjects[f].textContent) / 83;
+        let fund = parseFloat(fundObjects[f].textContent) / 80;
         fundObjects[f].textContent = `${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(fund)}`;
       }
     }
