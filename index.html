@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.6/css/dataTables.dataTables.css" />
   <style>
     .page-header {
       top: 0;
@@ -70,6 +71,10 @@
       position: relative;
     }
 
+    .carousel-caption {
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    }
+
     .no-bullet {
       list-style-type: none;
       padding: 0;
@@ -117,7 +122,7 @@
       padding: 0 4px;
     }
 
-    #treatment-table tr > td:nth-child(3) {
+    #treatment-table tr>td:nth-child(3) {
       text-align: right;
     }
 
@@ -202,7 +207,7 @@
   </div>
   <div class="row m-0">
     <div class="carousel-holder p-0">
-      <div id="mycarousel1" class="carousel carousel slide">
+      <div id="mycarousel1" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#mycarousel1" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Movin"></button>
@@ -254,7 +259,7 @@
               <p>April 6th 2024</p>
             </div>
           </div>
-          
+
           <div class="carousel-item">
             <img src="./images/20240326_1.jpg" class="h-100">
             <div class="carousel-caption">
@@ -262,7 +267,7 @@
               <p>March 26th 2024</p>
             </div>
           </div>
-          
+
           <div class="carousel-item">
             <img src="./images/20240323_1.jpg" class="h-100">
             <div class="carousel-caption">
@@ -351,6 +356,16 @@
             </ul>
           </li>
         </ul>
+
+        <table id="donations-table" class="display" style="width:100%">
+          <thead>
+            <tr>
+              <th>Date/Time</th>
+              <th>Donor Name</th>
+              <th>Donation Amount</th>
+            </tr>
+          </thead>
+        </table>
       </div>
       <div class="content-section">
         <div id="treatment-details-marker" class="nav-marker"></div>
@@ -412,7 +427,8 @@
                   <li><b>On April 4th 2024</b>, our son underwent a major surgical procedure to remove as much tumor as
                     possible
                     without putting his life at risk. In spite of the Doctors' best effort the tumor couldn't be fully
-                    removed as it had spread to some critical areas such as brain stem, that can't be operated. <b>So the
+                    removed as it had spread to some critical areas such as brain stem, that can't be operated. <b>So
+                      the
                       attempt to fully remove the tumor had failed.</b></li>
                 </ul>
               </td>
@@ -424,7 +440,8 @@
                 <ul class="treatment-details">
                   <li><b>On April 4th 2024</b>, the major surgical procedure to remove the tumor was performed and
                     <b>Doctors were
-                      able to remove about 70% of the Tumor</b>. The removed portion of the tumor was then sent to biopsy to
+                      able to remove about 70% of the Tumor</b>. The removed portion of the tumor was then sent to
+                    biopsy to
                     understand the nature of the tumor.
                   </li>
                 </ul>
@@ -435,7 +452,8 @@
               <td>
                 <span class="treatment-title">Diagnose Tumor Type</span>
                 <ul class="treatment-details">
-                  <li><b>On April 17th 2024</b>, the tumor tissue was studied and reported as <b>Grade-II cancer known as
+                  <li><b>On April 17th 2024</b>, the tumor tissue was studied and reported as <b>Grade-II cancer known
+                      as
                       Diffuse Astrocytoma</b>. Since, it's a cancerous tumor if left untreated it would spread to other
                     areas of brain and put our son's life at risk.</li>
                 </ul>
@@ -446,7 +464,8 @@
               <td>
                 <span class="treatment-title">Treat Hydrocephalus #2</span>
                 <ul class="treatment-details">
-                  <li><b>On April 19th 2024</b>, admitted to hospital again as the temperature was not going down even after 2 weeks (Fever had started on April 7th 2024). After
+                  <li><b>On April 19th 2024</b>, admitted to hospital again as the temperature was not going down even
+                    after 2 weeks (Fever had started on April 7th 2024). After
                     conducting various tests on blood, urine and CSF the doctors have identified that the placed VP
                     Shunt
                     was not functioning correctly and it's likely blocked because of an infection. Infection needs to be
@@ -467,7 +486,10 @@
               <td>
                 <span class="treatment-title">Port Surgery for Chemotherpy</span>
                 <ul class="treatment-details">
-                  <li>As per doctors' instructions, the chemotherpy medication has to be passed via large IV line and thus it's not possible to inject needle in hands/legs, especially for small children. A surgical procedure will be performed for placing a <b>Port</b> near the heart inside the body, that will give access to doctors to place IV line on it and pass the medication.</li>
+                  <li>As per doctors' instructions, the chemotherpy medication has to be passed via large IV line and
+                    thus it's not possible to inject needle in hands/legs, especially for small children. A surgical
+                    procedure will be performed for placing a <b>Port</b> near the heart inside the body, that will give
+                    access to doctors to place IV line on it and pass the medication.</li>
                 </ul>
               </td>
               <td><span class="treatment-status treatment-not-started">Will undergo in few weeks</span></td>
@@ -481,13 +503,20 @@
                 <span class="treatment-title">Undergo Chemotherpy for 2 or more years</span>
                 <ul class="treatment-details">
                   <li>As the tumor was identified to be cancerous, our son needs to
-                    undergo Chemotherpy to reduce/halt/shrink the growth of tumor. We were told by the doctors that Diffuse
-                    Astrocytoma is a type of Tumor that grows slowly and thus on the down-side takes a long time to respond
+                    undergo Chemotherpy to reduce/halt/shrink the growth of tumor. We were told by the doctors that
+                    Diffuse
+                    Astrocytoma is a type of Tumor that grows slowly and thus on the down-side takes a long time to
+                    respond
                     for Chemotherpy. Considering the age of our son, the only available treatment option is Chemotherpy.
-                    With Chemotherpy, a range of side effects including lower immunity level, kidney damage and hearing-loss
+                    With Chemotherpy, a range of side effects including lower immunity level, kidney damage and
+                    hearing-loss
                     can occur, and we only pray that none of these side-effects occur to our son.
                   </li>
-                  <li>Cost of this treatment is estimated at around <b><span class="fund">40000</span></b> per session. A session is a treatment course for a week (medicine will be given for 5 days and 2 days will be given for body to recover). On an average this treatment must be given for 2 years (52 weeks x 2 years = <b>104 sessions</b>). So the total cost of treatment for 104 weeks is <b><span class="fund">4160000</span></b></li>
+                  <li>Cost of this treatment is estimated at around <b><span class="fund">40000</span></b> per session.
+                    A session is a treatment course for a week (medicine will be given for 5 days and 2 days will be
+                    given for body to recover). On an average this treatment must be given for 2 years (52 weeks x 2
+                    years = <b>104 sessions</b>). So the total cost of treatment for 104 weeks is <b><span
+                        class="fund">4160000</span></b></li>
                 </ul>
               </td>
               <td><span class="treatment-status treatment-not-started">Will begin to undergo in few weeks</span></td>
@@ -501,15 +530,18 @@
                 <span class="treatment-title">Undergo Proton therapy after 3 years</span>
                 <ul class="treatment-details">
                   <li>As the tumor tissue was identified to be cancerous and our son needs to
-                    undergo Proton/Radition therapy to fully get rid of cancerous cells. However, considering the age of our
+                    undergo Proton/Radition therapy to fully get rid of cancerous cells. However, considering the age of
+                    our
                     son he needs to wait at least 2.5 to 3.5 years before he can undergo this treatment. Meanwhile,
                     Chemotherpy will prevent the tumor from growing further.
                   </li>
-                  <li>Cost of proton therapy is estimated at between <b><span class="fund">3000000</span></b> to <b><span class="fund">3500000</span></b></li>
+                  <li>Cost of proton therapy is estimated at between <b><span class="fund">3000000</span></b> to
+                    <b><span class="fund">3500000</span></b>
+                  </li>
                 </ul>
               </td>
               <td><span class="treatment-status treatment-not-started">Will undergo when our son is atleast
-                3 years old</span></td>
+                  3 years old</span></td>
               <td>
                 <span class="fund treatment-cost">3500000</span>
               </td>
@@ -521,8 +553,10 @@
                 <ul class="treatment-details">
                   <li>When surgical procedure to remove tumor was performed on April 4th 2024, doctors noticed that
                     they couldn't find vein in the right side of the neck (to give IV fluids, blood transfusion during
-                    surgery and anesthesia). Later, was diagnosed that due to tumor growth, the vein has been compressed, or
-                    created large clot that completely blocked the vein that takes blood from brain back to heart. Doctors
+                    surgery and anesthesia). Later, was diagnosed that due to tumor growth, the vein has been
+                    compressed, or
+                    created large clot that completely blocked the vein that takes blood from brain back to heart.
+                    Doctors
                     have assured that this is not an immediate threat, but will need a treatment in future.
                   </li>
                 </ul>
@@ -548,55 +582,73 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.0.6/js/dataTables.js"></script>
   <script>
-    let treatmentDetailsObjects = document.querySelectorAll(".treatment-details");
-    let handleExpadTreatmentDetails = function () {
-      this.classList.add("expanded");
-    }
-    for (let t = 0; t < treatmentDetailsObjects.length; ++t) {
-      treatmentDetailsObjects[t].addEventListener("click", handleExpadTreatmentDetails);
-    }
-
-    let totalTreatmentCost = 0;
-    let treatmentCostItems = document.querySelectorAll(".treatment-cost");
-    for (let t = 0; t < treatmentCostItems.length; ++t) {
-      totalTreatmentCost += parseFloat(treatmentCostItems[t].textContent);
-    }
-    document.querySelector("#total-treatment-cost").textContent = totalTreatmentCost.toString();
-    document.querySelector("#fund-needed").textContent = totalTreatmentCost.toString();
-
-    let fundObjects = document.querySelectorAll(".fund");
-    let formatFundForIndia = () => {
-      for (let f = 0; f < fundObjects.length; ++f) {
-        let fund = parseFloat(fundObjects[f].textContent);
-        fundObjects[f].textContent = `${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(fund)}`;
+    async function init() {
+      // Make treatment details collapsed by default
+      let treatmentDetailsObjects = document.querySelectorAll(".treatment-details");
+      let handleExpadTreatmentDetails = function () {
+        this.classList.add("expanded");
       }
-      // formatFundForUS();
-    }
-    let formatFundForUS = () => {
-      for (let f = 0; f < fundObjects.length; ++f) {
-        let fund = parseFloat(fundObjects[f].textContent) / 80;
-        fundObjects[f].textContent = `${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(fund)}`;
+      for (let t = 0; t < treatmentDetailsObjects.length; ++t) {
+        treatmentDetailsObjects[t].addEventListener("click", handleExpadTreatmentDetails);
+      }
+
+      // Compute total treatment cost
+      let totalTreatmentCost = 0;
+      let treatmentCostItems = document.querySelectorAll(".treatment-cost");
+      for (let t = 0; t < treatmentCostItems.length; ++t) {
+        totalTreatmentCost += parseFloat(treatmentCostItems[t].textContent);
+      }
+      document.querySelector("#total-treatment-cost").textContent = totalTreatmentCost.toString();
+      document.querySelector("#fund-needed").textContent = totalTreatmentCost.toString();
+
+      let formatComplete = () => {
+        new DataTable("#donations-table");
+      }
+
+      // Get donations
+      let donations = await (await fetch("/donations.json")).json();
+      console.log(donations);
+
+      // Format all the funds
+      let fundObjects = document.querySelectorAll(".fund");
+      let formatFundForIndia = () => {
+        for (let f = 0; f < fundObjects.length; ++f) {
+          let fund = parseFloat(fundObjects[f].textContent);
+          fundObjects[f].textContent = `${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(fund)}`;
+        }
+        // formatFundForUS();
+        formatComplete();
+      }
+      let formatFundForUS = () => {
+        for (let f = 0; f < fundObjects.length; ++f) {
+          let fund = parseFloat(fundObjects[f].textContent) / 80;
+          fundObjects[f].textContent = `${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(fund)}`;
+        }
+        formatComplete();
+      }
+
+      // Determine the locale
+      try {
+        let response = await fetch("https://www.cloudflare.com/cdn-cgi/trace")
+        let text = await response.text();
+        let country = text.match(/loc\=([A-Z]*)/)[1];
+        if (country === "IN") {
+          formatFundForIndia();
+        }
+        else {
+          formatFundForUS();
+        }
+      }
+      catch (ex) {
+        formatFundForIndia();
       }
     }
 
-    try {
-      fetch("https://www.cloudflare.com/cdn-cgi/trace")
-        .then(r => r.text())
-        .then(r => {
-          let country = r.match(/loc\=([A-Z]*)/)[1];
-          if (country === "IN") {
-            formatFundForIndia();
-          }
-          else {
-            formatFundForUS();
-          }
-        })
-        .catch(() => formatFundForIndia());
-    }
-    catch (ex) {
-      formatFundForIndia();
-    }
+    init();
   </script>
 </body>
 
